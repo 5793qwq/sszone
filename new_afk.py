@@ -1,4 +1,4 @@
-# By 1234567890regis - luogu = RandomGuy1520 - github
+# Some By 1234567890regis - luogu = RandomGuy1520 - github
 # Some by 5793__qwq - luogu = 5793qwq - github
 import cv2
 import keyboard
