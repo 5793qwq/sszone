@@ -499,6 +499,16 @@ print("start:\nGO GO GO!")
 while True:
     if keyboard.is_pressed('q'):
         break
+    t1 = time.localtime()
+    t2 = time.strftime("%H", t1)
+    t3 = int(t2)
+    print(t3)
+    if t3 <= 22 and t3 >= 20:
+        pyautogui.click(1800,2)
+        pyautogui.click()
+        print("click")
+        time.sleep(3600)
+        continue
     imgObj = pyautogui.screenshot()
     imgArr = cv2.cvtColor(np.array(imgObj), cv2.COLOR_RGB2BGR)
     ready = Image.open("Images/Ready.PNG")
@@ -509,7 +519,6 @@ while True:
             x_center = box.left  + box.width  // 2  
             y_center = box.top  + box.height  // 2 
             pyautogui.click(x_center,  y_center)
-            pyautogui.click()
             continue
     except:
         pass
